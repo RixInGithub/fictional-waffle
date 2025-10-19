@@ -9,4 +9,4 @@ for row in rest:
 		WE = row[max(count-1, 0):min(count+1,columns-1)]
 		newRow+=[sum(WE)/len(WE)]
 		count += 1
-	print(" ".join(newRow))
+	print(" ".join(list(map(str, newRow))))
