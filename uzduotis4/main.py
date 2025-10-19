@@ -6,7 +6,7 @@ for row in rest:
 	newRow = []
 	count = 0
 	while count < columns:
-		WE = row[max(count-1, 0):min(count+1,columns-1)]
+		WE = row[max(count-1, 0):min(count+1,columns-1)] # yes, WE
 		newRow+=[sum(WE)/len(WE)]
 		count += 1
 	print(" ".join(list(map(str, map(int, newRow))))) # float => int (to trim off decimal) => str (for joining)
