@@ -7,4 +7,4 @@ pplIO.close()
 desine = []
 kaire = []
 for a in ppl: (desine if (a[0]%2==0) else kaire).append(a[1])
-print("\n".join(map(str,[(a:=sum(*desine))+(b:=sum(*kaire)), b, a, b/len(kaire), a/len(desine)])))
+print("\n".join(map(str,[(a:=sum(desine))+(b:=sum(kaire)), b, a, b/len(kaire), a/len(desine)])))
