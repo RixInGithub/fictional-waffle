@@ -15,7 +15,6 @@ jobs:
             - name: run!!!!!!
               run: |
                   dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||')
-                  echo $dirs
                   for d in $dirs; do
                       (cd "$d" && python main.py)
                   done
