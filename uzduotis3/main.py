@@ -1,3 +1,3 @@
 pplIO = open("./data.txt","r",encoding="utf8")
-linesArr = [line.rstrip('\n') for line in pplIO.readlines()[:int(pplIO.readline())]]
+linesArr = [(a:=int(pplIO.readline())),[a[:-1] for a in pplIO.readlines()[:a]]]
 print(linesArr)
