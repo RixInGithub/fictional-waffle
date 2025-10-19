@@ -1,8 +1,7 @@
 # x%2 == 0 => dešinė (what is it in english again? fiddlesticks!!!)
 # x%2 == 1 => kairė (someone help)
 
-pplIO = open("./data.txt","r",encoding="utf8")
-ppl = [(a:=int(pplIO.readline())),[list(map(int, a.split(" "))) for a in pplIO.readlines()[:a]]][1]
+with open("./data.txt","r",encoding="utf8") as pplIO: ppl = [(a:=int(pplIO.readline())),[list(map(int, a.split(" "))) for a in pplIO.readlines()[:a]]][1]
 pplIO.close()
 desine = []
 kaire = []
