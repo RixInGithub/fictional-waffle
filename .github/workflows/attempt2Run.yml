@@ -15,8 +15,10 @@ jobs:
             - name: run!!!!!!
               run: |
                   dirs=$(find . -maxdepth 1 -type d -name './uzduotis*' -printf "%f ")
+                  echo $dirs
                   for d in $dirs ; do
                       cd $d
+                      echo $d
                       python main.py
                       cd ..
                   done
