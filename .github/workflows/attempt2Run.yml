@@ -1,0 +1,22 @@
+name: attempt to run
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: check out
+              uses: actions/checkout@v4
+            - name: install python ***3.12***
+              uses: actions/setup-python@v6
+              with:
+                  python-version: 3.12
+            - name: run!!!!!!
+              run: |
+                  dirs=$(find . -maxdepth 1 -type d -name './uzduotis*' -printf "%f ")
+                  for d in $dirs ; do
+                      cd $d
+                      python main.py
+                      cd ..
+                  done
