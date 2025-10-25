@@ -1,3 +1,5 @@
+# NOTE: neuzbaigta, pabaigsiu rytoj
+# prasyciau neziuret i sita ;p
 with open("./data.txt","r",encoding="utf8") as signalsIO:
 	global rows, columns, rest
 	rows, columns = list(map(int, signalsIO.readline().split(" ")))
