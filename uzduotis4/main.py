@@ -1,5 +1,5 @@
 # NOTE: bug was with the gobble-gabbler'ing indexing
-with open("./data (2).txt","r",encoding="utf8") as signalsIO:
+with open("./data.txt","r",encoding="utf8") as signalsIO:
 	global rows, columns, rest
 	rows, columns = list(map(int, signalsIO.readline().split(" ")))
 	rest = [list(map(int, a.split(" "))) for a in signalsIO.readlines()]
