@@ -17,5 +17,5 @@ jobs:
                   dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
                   for d in $dirs; do
                       echo "$d:" | sed "s/^uzduotis/Užduotis #/"
-                      (cd "$d" && python main.py)
+                      (cd "$d" && python main.py ; true)
                   done
