@@ -5,6 +5,6 @@ with open("./data.txt","r",encoding="utf8") as lIO, open("./2encode.txt","r",enc
 	l2Coded = dict(letters) # entries => dict (for ezier management)
 	rawL = "".join([a[0] for a in letters])
 	notL = "".join([a for a in "aąbcčdeęėfghiįyjklmnoprsštuųūvzž" if not a in rawL])
-	toEncode = [reduce(lambda l, b: b.replace(l,""), notL, a) for a in dIO.read().split(" ")]
+	toEncode = dIO.read().split(" ")
 	print(toEncode)
-	print("\n".join([" ".join([l2Coded[b] for b in a]) for a in toEncode]))
+	print("\n".join([" ".join([l2Coded[b] for b in a if a in l2Coded]) for a in toEncode]))
