@@ -1,7 +1,7 @@
 import re as regex
 with open("./data.txt", "r", encoding="utf8") as strIO:
 	s = strIO.read()
-	a = lambda b: len(list(regex.finditer(b, txt)))
+	a = lambda b: len(list(regex.finditer(b, s)))
 	print(f"""
 Raidžių yra {a(r'[A-Za-ząčęėįšųūĄČĘĖĮŠŲŪ]')}
 Skaitmenų yra {a(r'[0-9]')}
