@@ -6,15 +6,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-why in the PLUCK did i make so much lines for this? go figure! idk either!
+i removed some lines ig
