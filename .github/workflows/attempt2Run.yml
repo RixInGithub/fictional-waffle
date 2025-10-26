@@ -13,25 +13,24 @@ jobs:
             - name: check if changed
               id: chk
               run: |
-                  if git diff-tree --no-commit-id --name-only -r HEAD | grep -q '/'; then
-                      echo "h=h" >> $GITHUB_OUTPUT
-                  fi
+                  inner() {
+                      if git diff-tree --no-commit-id --name-only -r HEAD | grep -q '/'; then
+                          echo "h=h" >> $GITHUB_OUTPUT
+                          return
+                      fi
+                      echo "Žiūrėkite praeitą commit jei norite output."
+                  }
+                  inner
             - name: install python ***3.12***
               uses: actions/setup-python@v6
               if: steps.chk.outputs.h == 'h'
               with:
                   python-version: 3.12
             - name: run!!!!!!
+              if: steps.chk.outputs.h == 'h'
               run: |
-                  attemptChallenges() {
-                      if git diff-tree --no-commit-id --name-only -r HEAD | grep -q '/'; then
-                          dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
-                          for d in $dirs; do
-                              echo "$d:" | sed "s/^uzduotis/Užduotis #/"
-                              (cd "$d" && python main.py || true)
-                          done
-                          return
-                      fi
-                      echo "Žiūrėkite praeitą commit jei norite output."
-                  }
-                  attemptChallenges
+                  dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
+                  for d in $dirs; do
+                      echo "$d:" | sed "s/^uzduotis/Užduotis #/"
+                      (cd "$d" && python main.py || true)
+                  done
