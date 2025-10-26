@@ -17,15 +17,14 @@ jobs:
             - name: run!!!!!!
               run: |
                   attemptChallenges() {
-                      if git diff-tree --no-commit-id --name-only -r HEAD | grep -vq '/'; then
-                          echo "Žiūrėkite praeitą commit jei norite output."
+                      if git diff-tree --no-commit-id --name-only -r HEAD | grep -q '/'; then
+                          dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
+                          for d in $dirs; do
+                              echo "$d:" | sed "s/^uzduotis/Užduotis #/"
+                              (cd "$d" && python main.py || true)
+                          done
                           return
                       fi
-                      dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
-                      for d in $dirs; do
-                          echo "$d:" | sed "s/^uzduotis/Užduotis #/"
-                          (cd "$d" && python main.py || true)
-                      done
-                      return
+                      echo "Žiūrėkite praeitą commit jei norite output."
                   }
                   attemptChallenges
