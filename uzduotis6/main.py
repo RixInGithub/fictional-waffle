@@ -7,4 +7,4 @@
 # if line 3 is false, just go to https://github.com/RixInGithub/fictional-waffle/blob/main/uzduotis6/data.txt and click on the button which shows a square on top of another square
 with open("./data.txt", "r", encoding="utf8") as strIO:
 	s = strIO.read()
-	print("\n".join([" ".join([a, s.count(str(a))]) for a in range(10)]))
+	print("\n".join([" ".join(map(str, [a, s.count(str(a))])) for a in range(10)]))
