@@ -12,5 +12,5 @@
 		i) (-4) ** 3 ir (-2) ** 5
 """
 # data.txt pvz: https://github.com/RixInGithub/fictional-waffle/blob/main/uzduotis5/data.txt
-# NOTE: kai kuriuos supaprastinau, pvz "3 ** -5 ir 3 ** 0" => "1/243 ir 1"
-with open("./data.txt") as nIO: print(f"{[(count:=97),(n:=[[a.rstrip('\n'),a.rstrip('\n').split(' ')] for a in nIO.readlines()]),''][2]}{[(n:=[[a[0],[float(b.split('/')[0])/float(b.split('/')[1]) if '/' in b else float(b) for b in a[1]]] for a in n]),''][1]}{'\n'.join([(' '*4)+chr((count:=count+1)-1)+') '+a[0].split(' ')[0]+' '+chr(60+(a[1][0]>a[1][1])+(a[1][0]>=a[1][1]))+' '+a[0].split(' ')[1] for a in n])}")
+# NOTE: kai kuriuos supaprastinau, pvz "3 ** -5 ir 3 ** 0" => "1/243 1"
+with open("./data.txt","r",encoding="utf8") as nIO: print(f"{[(count:=97),(n:=[[a.rstrip('\n'),a.rstrip('\n').split(' ')] for a in nIO.readlines()]),''][2]}{[(n:=[[a[0],[float(b.split('/')[0])/float(b.split('/')[1]) if '/' in b else float(b) for b in a[1]]] for a in n]),''][1]}{'\n'.join(['    '+chr((count:=count+1)-1)+') '+a[0].split(' ')[0]+' '+chr(60+(a[1][0]>a[1][1])+(a[1][0]>=a[1][1]))+' '+a[0].split(' ')[1] for a in n])}")

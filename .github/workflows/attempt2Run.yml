@@ -3,7 +3,7 @@ name: attempt to run
 on: push
 
 jobs:
-    build:
+    runnerino:
         runs-on: ubuntu-latest
         steps:
             - name: check out
