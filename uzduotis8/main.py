@@ -8,7 +8,7 @@ Pradiniai duomenys
 --------------------------------
 Išrinkti miestai
 --------------------------------
-{'\n'.join([c for c in cities if ' ' in c])}
+{'\n'.join([c for c in cities.split('\n') if ' ' in c])}
 """[1:])
 
 # leaves that extra line at the end too btw
