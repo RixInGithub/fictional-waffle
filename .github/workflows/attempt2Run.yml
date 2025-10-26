@@ -14,8 +14,17 @@ jobs:
                   python-version: 3.12
             - name: run!!!!!!
               run: |
-                  dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
-                  for d in $dirs; do
-                      echo "$d:" | sed "s/^uzduotis/Užduotis #/"
-                      (cd "$d" && python main.py ; true)
-                  done
+                  attemptChallenges() {
+                      git diff-tree --no-commit-id --name-only -r HEAD | sed '|\/|!q1' > /dev/null 1&2
+                      canRun=$?
+                      if [ $canRun -eq 0 ]; then
+                          dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
+                          for d in $dirs; do
+                              echo "$d:" | sed "s/^uzduotis/Užduotis #/"
+                              (cd "$d" && python main.py ; true)
+                          done
+                          return
+                      fi
+                      echo "Žiurėkite praeitą commit jei norite output."
+                  }
+                  attemptChallenges
