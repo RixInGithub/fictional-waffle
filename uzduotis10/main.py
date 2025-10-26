@@ -7,4 +7,4 @@ with open("./data.txt","r",encoding="utf8") as lIO, open("./2encode.txt","r",enc
 	notL = "".join([a for a in "aąbcčdeęėfghiįyjklmnoprsštuųūvzž" if not a in rawL])
 	toEncode = dIO.read().split(" ")
 	print(toEncode)
-	print("\n".join([" ".join([l2Coded[b] for b in a if a in l2Coded]) for a in toEncode]))
+	print("\n".join([" ".join([l2Coded[b] for b in a if l2Coded.get(a,None)!=None]) for a in toEncode]))
