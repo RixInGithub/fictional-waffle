@@ -5,6 +5,7 @@ try:
 except: pass
 if not exists:
 	nm = input("įveskite profilio vardą: ")
+	print("")
 	logs = 0
 	rox = 0
 	with open("saveData.json","w",encoding="utf8") as startIO: json.dump([nm,logs,rox],startIO)
