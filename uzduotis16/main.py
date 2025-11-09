@@ -30,7 +30,7 @@ def main():
 				bM_Data = json.load(bM_IO)
 				print("katalogas")
 				print("")
-				for name,rating in bM_Data.items():
+				for name,rating in sorted(bM_Data.items()):
 					print(name, f"- {rating}/10")
 
 main()
