@@ -7,4 +7,4 @@ with open("data1.txt","r",encoding="utf8") as d1IO, open("data2.txt","r",encodin
 	d2 = [a for a in cp(oD2) if a in oD1]
 	needsCounted = [*set(cp(d1)+cp(d2))]
 	res = ";".join([" - ".join([a, str(max(d1.count(a),d2.count(a)))]) for a in needsCounted])
-	print(res)
+	with open("output.txt","w",encoding="utf8") as oIO: oIO.write(res)
