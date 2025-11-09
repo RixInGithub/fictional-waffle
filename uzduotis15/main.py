@@ -22,9 +22,16 @@ with open("saveData.json","r+",encoding="utf8") as dataIO:
 		match opt:
 			case 1:
 				tmp = input("naujas vardas (spauskite enter, jei norite anuliuoti veiksmą): ")
-				if tmp.strip()!="": nm = tmp
-			case 2: logs+=5
-			case 3: rox+=5
+				print("")
+				if tmp.strip()=="": continue
+				nm = tmp
+				print("naujas vardas:", nm)
+			case 2:
+				logs+=5
+				print("+5 medžiai")
+			case 3:
+				rox+=5
+				print("+5 akmenys")
 			case 4:
 				print(f"{logs} med{"žiai" if logs!=1 else "is"}\n{rox} akmen{"y" if logs!=1 else "i"}s")
 			case _: # if opt is 0 or smth invalid
