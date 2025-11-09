@@ -18,6 +18,7 @@ with open("saveData.json","r+",encoding="utf8") as dataIO:
 		try:
 			opt = int(input("padarykite pasirinkimą: "))
 		except: opt = 0 # stupid
+		print("") # just in case™
 		match opt:
 			case 1:
 				tmp = input("naujas vardas (spauskite enter, jei norite anuliuoti veiksmą): ")
