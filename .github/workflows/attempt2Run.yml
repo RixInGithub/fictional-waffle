@@ -32,5 +32,11 @@ jobs:
                   dirs=$(find . -maxdepth 1 -type d -name 'uzduotis*' | sed 's|^\./||' | sort -t s -k 2,2n)
                   for d in $dirs; do
                       echo "$d:" | sed "s/^uzduotis/Užduotis #/"
-                      (cd "$d" && python main.py || true)
+                      num="${d#uzduotis}"
+                      inp=""
+                      if grep -qE "^$num => " ./needsInp.txt; then
+                          tmp=$(grep -E "^$num => " yourfile.txt | sed -E "s/^$num => //")
+                          inp=$(jq -r <<<"$tmp")
+                      fi
+                      echo "$inp" | (cd "$d" && python3 main.py || true)
                   done

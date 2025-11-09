@@ -1,0 +1,1 @@
+Šis tekstas iš pradžių buvo PIRMAME duomenų faile, bet po programos įvykdymo atsiras ANTRAME faile.
