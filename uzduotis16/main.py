@@ -23,6 +23,7 @@ def main():
 				print("")
 				bM_Data[bM_Name]=bM_Rating
 				json.dump(bM_Data,bM_IO)
+				bM_IO.seek(0)
 				bM_Data = json.load(bM_IO)
 				print(f"\"{bM_Name}\" pridėta sėkmingai! (įvertinimas: {bM_Rating}/10)")
 			case _:
