@@ -36,6 +36,7 @@ with open("saveData.json","r+",encoding="utf8") as dataIO:
 				print(f"{logs} med{"žiai" if logs!=1 else "is"}\n{rox} akmen{"y" if logs!=1 else "i"}s")
 			case _: # if opt is 0 or smth invalid
 				running = False
+		print("")
 	# when we exit, we need to save
 	dataIO.seek(0)
 	json.dump([nm,logs,rox],dataIO)
