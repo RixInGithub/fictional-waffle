@@ -20,6 +20,7 @@ def main():
 		print("password must have 8 chars.")
 		return
 	pHash = sha256(p.encode()).hexdigest()
+	with open("users.json","w",encoding="utf8") as chkIO: pass
 	with open("users.json","r+",encoding="utf8") as usersIO: # REMINDER to ALWAYS store user data in DATABASES in even tiny serious scenarios.
 		dt = json.load(usersIO)
 		match opt:

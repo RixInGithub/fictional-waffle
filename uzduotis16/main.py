@@ -1,6 +1,7 @@
 import json
 
 def main():
+	with open("booksOrMovies.json","w",encoding="utf8") as chkIO: pass
 	with open("booksOrMovies.json","r+",encoding="utf8") as bM_IO:
 		bM_Data = json.load(bM_IO)
 		bM_IO.seek(0)
