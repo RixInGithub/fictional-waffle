@@ -39,5 +39,6 @@ with open("saveData.json","r+",encoding="utf8") as dataIO:
 				running = False
 		print("")
 	# when we exit, we need to save
+	print("free dešimtukas")
 	dataIO.seek(0)
 	json.dump([nm,logs,rox],dataIO)
