@@ -1,4 +1,4 @@
-from deepcopy import copy as cp
+from copy import deepcopy as cp
 
 with open("data1.txt","r",encoding="utf8") as d1IO, open("data2.txt","r",encoding="utf8") as d2IO:
 	oD1 = d1IO.read().split(" ")
