@@ -1,4 +1,5 @@
 import json
+
 exists=False
 try:
 	with open("saveData.json","r",encoding="utf8") as chkIO: exists=True
