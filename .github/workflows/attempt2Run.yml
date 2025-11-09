@@ -35,8 +35,8 @@ jobs:
                       num="${d#uzduotis}"
                       inp=""
                       if grep -qE "^$num => " ./needsInp.txt; then
-                          tmp=$(grep -E "^$num => " yourfile.txt | sed -E "s/^$num => //")
+                          tmp=$(grep -E "^$num => " ./needsInp.txt | sed -E "s/^$num => //")
                           inp=$(jq -r <<<"$tmp")
                       fi
-                      echo "$inp" | (cd "$d" && python3 main.py || true)
+                      printf "%s" "$inp" | (cd "$d" && python3 main.py || true)
                   done
