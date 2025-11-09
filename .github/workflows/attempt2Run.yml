@@ -40,3 +40,9 @@ jobs:
                       fi
                       printf "%s" "$inp" | (cd "$d" && python3 main.py || true)
                   done
+            - name: upload everything to internet archive ig
+              uses: actions/upload-artifact@v4
+              if: steps.chk.outputs.h == 'h'
+              with:
+                  name: uzduotysOutput
+                  path: .
