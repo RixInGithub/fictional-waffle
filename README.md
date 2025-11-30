@@ -2,3 +2,4 @@
 - 2024/10/26 hw is in `uzduotis5`
 - 2024/10/26 challenges start from `uzduotis6`
 - 2024/11/09 challenges start from `uzduotis11`
+- 2024/11/30 challenges start from `uzduotis17`
