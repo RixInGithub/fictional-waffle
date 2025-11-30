@@ -21,4 +21,4 @@ with open("DuomAlbumai.txt","r",encoding="utf8") as alIO:
 	longest = max([len(a.name) for a in als])+4
 	als.sort(key=lambda a: a.listens)
 	for a in als:
-		print(a.names.ljust(longest, " "),a.year)
+		print(a.name.ljust(longest, " "),a.year)
