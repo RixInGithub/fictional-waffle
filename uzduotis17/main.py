@@ -12,7 +12,7 @@ class Payer:
 		return sum([a for a in [self.heat,self.service,self.water] if a>0])
 
 with open("data.txt","r",encoding="utf8") as payersIO:
-	payers = [Payer(*a.split(" ")) for a in payersIO.read().split("\n")] # hehe
+	payers = [a for a in [Payer(*b.split(" ")) for b in payersIO.read().split("\n")] if a.total()!=0] # hehe
 	totals = [sum([a.heat for a in payers if a.heat>0]), sum([a.service for a in payers if a.service>0]), sum([a.water for a in payers if a.water>0])]
 	print("Už šilumą turi būti sumokėta:  ", totals[0])
 	print("Už telefoną turi būti sumokėta:", totals[1])
