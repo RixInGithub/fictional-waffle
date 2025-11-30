@@ -22,5 +22,5 @@ with open("data.txt","r",encoding="utf8") as payersIO:
 	print("-"*33)
 	longestName = max(payers, key=lambda p: len(p.name))
 	for p in payers:
-		print(" ",p.name+" "*(len(longestName.name)+18-len(p.name)),p.total())
+		print(" ",p.name+" "*max(18-len(p.name),0),p.total())
 	print("-"*33)
