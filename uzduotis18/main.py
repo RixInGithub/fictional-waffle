@@ -19,6 +19,6 @@ with open("DuomAlbumai.txt","r",encoding="utf8") as alIO:
 	print(totalMins//60, totalMins%60)
 	print(sum([a.listens for a in als])/len(als))
 	longest = max([len(a.name) for a in als])+4
-	als.sort(key=lambda a: a.listens)
+	als.sort(key=lambda a: a.listens, reverse=True)
 	for a in als:
 		print(a.name.ljust(longest, " "),a.year)
