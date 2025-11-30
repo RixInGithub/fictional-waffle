@@ -1,4 +1,5 @@
 import re as regex
+from copy import deepcopy as cp
 
 class Album:
 	name = ""
@@ -13,4 +14,11 @@ class Album:
 
 with open("DuomAlbumai.txt","r",encoding="utf8") as alIO:
 	als = regex.findall(r"^([^\d]+) (.+)$", alIO.read(), regex.MULTILINE)
-	print(als)
+	als = [Album(a[0], *[int(b) for b in a[1].split(" ")]) for a in als]
+	totalMins = sum([a.mins for a in als])
+	print(totalMins//60, totalMins%60)
+	print(sum([a.listens for a in als])/len(als))
+	longest = max([len(a.name) for a in als])+4
+	als.sort(key=lambda a: a.listens)
+	for a in als:
+		print(a.names.ljust(longest, " "),a.year)
