@@ -1,0 +1,20 @@
+Paulius 32 pasta Builder Wood-20x30 Ceramics-180x260
+Greta 24 sushi Student Medicine
+Rokas 45 burger Builder Stone-200x350
+Monika 27 salad Student Mathematics
+Arnas 37 pizza Builder Wood-10x5 Stone-30x60 Ceramics-300x500
+Kamile 22 curry Student Philology
+Lukas 33 kebab Builder Wood-1x2 Stone-160x240
+Justina 20 noodles Student Sociology
+Simonas 48 steak Builder Ceramics-220x440
+Jurate 25 tacos Student Finance
+Vytautas 29 burrito Builder Stone-1000x345 Wood-140x280
+Emilija 19 ramen Student Nursing
+Tautvydas 52 cepelinai Builder Wood-250x450
+Indre 23 pasta Student GraphicDesign
+Edgaras 39 pizza Builder Ceramics-10x15 Stone-210x310
+Diana 21 sushi Student Law
+Mindaugas 44 stew Builder Wood-54x67 Ceramics-190x270
+Aiste 26 falafel Student Physics
+Giedrius 36 burger Builder Stone-22x100 Ceramics-170x260
+Saulė 18 pancakes Student ComputerScience
