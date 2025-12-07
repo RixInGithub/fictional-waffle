@@ -34,7 +34,7 @@ with open("data.txt", "r", encoding="utf8") as pplIO:
 		pRest = pList[4:]
 		if pList[2] == "Builder": pRest = [[Resource(*r.split("-")) for r in pRest]]
 		print(pList)
-		pObj = pCls(pList[0], pList[1], pList[2], *pList[4:])
+		pObj = pCls(pList[0], pList[1], pList[2], *pRest)
 		objs.append(pObj)
 for p in objs:
 	print(p)
