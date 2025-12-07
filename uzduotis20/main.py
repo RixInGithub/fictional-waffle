@@ -1,20 +1,17 @@
 class Animal:
-	def __init__(self): pass
+	def __init__(self, snd="..."):
+		self.snd=snd
 	def makeSound(self):
-		print("...")
+		print(self.snd)
 
-class Dog(Animal):
-	def makeSound(self): print("woof")
+class Dog(Animal): pass
 
-class Cat(Animal):
-	def makeSound(self): print("meoww")
+class Cat(Animal): pass
 
-class Cow(Animal):
-	def makeSound(self): print("moooo")
+class Cow(Animal): pass
 
 def playSound(a):
 	a.makeSound()
 
-animals = [Dog(), Cat(), Cow()]
-for a in animals:
-	playSound(a)
+animals = [Dog("woof"), Cat("meoww"), Cow("moooo")]
+for a in animals: playSound(a)
