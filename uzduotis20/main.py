@@ -1,8 +1,6 @@
 class Animal:
-	def __init__(self, snd="..."):
-		self.snd=snd
-	def makeSound(self):
-		print(self.snd)
+	def __init__(self, snd="..."): self.snd=snd
+	def makeSound(self): print(self.snd)
 
 class Dog(Animal): pass
 

@@ -1,5 +1,6 @@
-- 2024/10/19 challenges start from `uzduotis1`
-- 2024/10/26 hw is in `uzduotis5`
-- 2024/10/26 challenges start from `uzduotis6`
-- 2024/11/09 challenges start from `uzduotis11`
-- 2024/11/30 challenges start from `uzduotis17`
+- 2025/10/19 challenges start from `uzduotis1`
+- 2025/10/26 hw is in `uzduotis5`
+- 2025/10/26 challenges start from `uzduotis6`
+- 2025/11/09 challenges start from `uzduotis11`
+- 2025/11/30 challenges start from `uzduotis17`
+- 2026/01/18 ***SPECIAL*** challenges start from `uzduotis21`
