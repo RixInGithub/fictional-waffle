@@ -8,6 +8,7 @@ while count < n:
 		case 0:
 			res[0] += num
 		case _: # allat for no else statements? worth it
+			if res[1]==0: res[1]=1
 			res[1] *= num
 	count += 1
 print(" ".join([str(a) for a in res]))
