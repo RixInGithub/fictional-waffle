@@ -6,4 +6,4 @@ while count < n:
 	num = int(input())
 	res[num%2] += num
 	count += 1
-print(" ".join(res))
+print(" ".join([str(a) for a in res]))

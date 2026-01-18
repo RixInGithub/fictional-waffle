@@ -10,4 +10,4 @@ while count < n:
 		case _: # allat for no else statements? worth it
 			res[1] *= num
 	count += 1
-print(" ".join(res))
+print(" ".join([str(a) for a in res]))

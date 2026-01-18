@@ -3,7 +3,7 @@
 # textual exercises? i have place with a bunch of those, it's called the math workbook. :p
 cm = 5
 count = 0
-while count < n:
+while count < cm:
 	print("Tuk!")
 	count += 1
 print("Vinis įkalta")
